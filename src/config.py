@@ -17,6 +17,7 @@ RANDOM_STATE: int = 42       # reproducibility seed
 #   normal/          → class 0
 #   inner_race/  (or any folder containing "inner") → class 1
 #   ball/        (or any folder containing "ball")  → class 2
+#   outer_race/  (or any folder containing "outer") → class 3
 #
 # Add or reorder entries here to support additional fault types without
 # touching any other source file.
@@ -24,6 +25,7 @@ LABEL_MAP: dict[str, int] = {
     "normal": 0,
     "inner":  1,   # matches "inner_race", "innerrace", "IR", etc.
     "ball":   2,
+    "outer":  3,   # matches "outer_race", "outerrace", "OR", etc.
 }
 
 CLASS_NAMES: dict[int, str] = {v: k.capitalize() for k, v in LABEL_MAP.items()}

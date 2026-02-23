@@ -1,2 +1,8 @@
 numpy
 scipy
+scikit-learn
+tqdm
+joblib
+matplotlib
+pandas
+

@@ -1,0 +1,17 @@
+data/processed/X.npy
+data/processed/y.npy
+data/processed/groups.npy
+data/raw/normal/
+data/raw/inner_race/
+data/raw/ball/
+data/raw/outer_race/
+models/rf_multiclass.pkl, rf_baseline.pkl
+__pycache__/
+ipynb_checkpoints/
+.pytest_cache/
+.vscode/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

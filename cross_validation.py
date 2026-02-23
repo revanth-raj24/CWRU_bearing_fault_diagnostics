@@ -3,11 +3,11 @@ cross_validation.py
 -------------------
 Entry point: stratified group k-fold cross-validation.
 
-Why n_splits=4 (not 5)?
+Why n_splits=3 (not 4 or 5)?
   Normal class has only 4 source .mat files (groups).
   StratifiedGroupKFold needs at least n_splits groups per class to
   guarantee every test fold contains Normal samples.
-  Using n_splits=4 is the maximum safe value given the data.
+  Using n_splits=3 is safer and gives more stable results.
 
 Usage (from project root):
     python cross_validation.py
@@ -24,7 +24,7 @@ from src.split import group_cross_validation
 from src.train import train_random_forest
 
 
-def main(n_splits: int = 4):
+def main(n_splits: int = 3):
     # ── Load processed data ───────────────────────────────────────────────
     print("Loading processed data …")
     X      = np.load("data/processed/X.npy")
